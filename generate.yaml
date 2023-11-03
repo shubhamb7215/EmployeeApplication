@@ -4,7 +4,9 @@ description: 'Perform Employee Related '
 basePath: /employeeapplication
 openApiSpec: EmployeeApplication.yaml
 authMethod: none
-responseCache:
-  timeDuration: 200
+azureRateLimit:
+  noOfCalls: 11
+  renewalPeriod: 11
+  counter: ip-address
 schemes: []
 routes: []
