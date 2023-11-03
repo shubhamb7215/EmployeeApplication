@@ -1,0 +1,53 @@
+---
+openapi: "3.0.1"
+info:
+  title: "EmployeeApplication"
+  description: "Perform Employee Related "
+  version: "v1.0"
+servers:
+- url: "http://44.215.96.46:8080"
+  description: "Generated server url"
+paths:
+  /employees/getAll:
+    get:
+      tags:
+      - "employee-controller"
+      summary: "Get Employee Data"
+      operationId: "getAllEmployee"
+      responses:
+        "400":
+          description: "Bad request"
+          content:
+            application/yaml:
+              schema:
+                type: "array"
+                items:
+                  $ref: "#/components/schemas/Employee"
+        "404":
+          description: "Not Found"
+          content:
+            application/yaml:
+              schema:
+                type: "array"
+                items:
+                  $ref: "#/components/schemas/Employee"
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/yaml:
+              schema:
+                type: "array"
+                items:
+                  $ref: "#/components/schemas/Employee"
+components:
+  schemas:
+    Employee:
+      type: "object"
+      properties:
+        name:
+          type: "string"
+        role:
+          type: "string"
+        salary:
+          type: "integer"
+          format: "int32"

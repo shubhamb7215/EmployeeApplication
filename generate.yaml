@@ -1,0 +1,10 @@
+---
+name: EmployeeApplication
+description: 'Perform Employee Related '
+basePath: /employeeapplication
+openApiSpec: EmployeeApplication.yaml
+authMethod: none
+responseCache:
+  timeDuration: 200
+schemes: []
+routes: []
