@@ -5,7 +5,7 @@ info:
   description: "Perform Employee Related "
   version: "v1.0"
 servers:
-- url: "http://44.215.96.46:8080"
+- url: "http://44.215.96.46:8082"
   description: "Generated server url"
 paths:
   /employees/getAll:

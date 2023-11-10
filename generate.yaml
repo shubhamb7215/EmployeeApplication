@@ -1,12 +1,11 @@
 ---
-name: EmployeeApplication
+name: employeeapplication
 description: 'Perform Employee Related '
 basePath: /employeeapplication
-openApiSpec: EmployeeApplication.yaml
+openApiSpec: employeeapplication.yaml
+environmentSpec: INT
 authMethod: none
-azureRateLimit:
-  noOfCalls: 11
-  renewalPeriod: 11
-  counter: ip-address
+responseCache:
+  timeDuration: 45
 schemes: []
 routes: []
