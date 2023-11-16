@@ -13,8 +13,22 @@ azureRateLimit:
   counter: ip-address
 responseCache:
   timeDuration: 2
+validateJWT:
+  headerName: Authorization
+  failedStatusCode: 401
+  failedStatusMessage: Authorization failure
+  openIdURL: https://sit.identity.idmodule.eu/.well-known/openid-configuration
+  requiredClaims:
+    name: auth
+    match: all
 corelation:
   correlationId: "true"
-  trace: "true"
+allowedOrigins:
+  origins: http://localhost/
+  creds: "false"
+  methods: "get,post"
+  allowHeaders: X-PINGOTHER
+  exposeHeaders: Expires
+  maxSeconds: 120
 schemes: []
 routes: []
